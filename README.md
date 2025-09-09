@@ -1,7 +1,7 @@
 # Apollo Prometheus Exporter
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bfmatei/apollo-prometheus-exporter/Release)
-![npm](https://img.shields.io/npm/v/@bmatei/apollo-prometheus-exporter)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/moderneinc/apollo-prometheus-exporter/Release)
+![npm](https://img.shields.io/npm/v/@moderneinc/apollo-prometheus-exporter)
 
 Plugin for Apollo Server to export metrics in Prometheus format.
 
@@ -32,10 +32,10 @@ For default metrics, please refer to [prom-client](https://github.com/siimon/pro
 
 ## Usage
 
-1. Install `prom-client` and `@bmatei/apollo-prometheus-exporter`
+1. Install `prom-client` and `@moderneinc/apollo-prometheus-exporter`
 
    ```shell script
-   npm install prom-client @bmatei/apollo-prometheus-exporter
+   npm install prom-client @moderneinc/apollo-prometheus-exporter
    ```
 
 2. Create an instance of the plugin

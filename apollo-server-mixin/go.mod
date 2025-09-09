@@ -1,4 +1,4 @@
-module github.com/bfmatei/apollo-prometheus-exporter/apollo-mixin
+module github.com/moderneinc/apollo-prometheus-exporter/apollo-mixin
 
 go 1.14
 

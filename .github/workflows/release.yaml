@@ -6,6 +6,7 @@ on:
       - 3.x
       - 2.x
       - 1.x
+  workflow_dispatch:
 jobs:
   release:
     name: release

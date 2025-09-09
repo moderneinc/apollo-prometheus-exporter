@@ -10,7 +10,13 @@ import {
   GraphQLFieldResolverParams
 } from '@apollo/server';
 import { Express } from 'express';
-import { DefaultMetricsCollectorConfiguration, LabelValues, register, Registry } from 'prom-client';
+import {
+  DefaultMetricsCollectorConfiguration,
+  LabelValues,
+  register,
+  Registry,
+  PrometheusContentType
+} from 'prom-client';
 
 import {
   FieldLabels,
@@ -59,7 +65,7 @@ export interface Context<C extends BaseContext = AppContext, S = Source, A = Arg
   app: Express;
   defaultLabels: LabelValues<string>;
   defaultMetrics: boolean;
-  defaultMetricsOptions: DefaultMetricsCollectorConfiguration;
+  defaultMetricsOptions: DefaultMetricsCollectorConfiguration<PrometheusContentType>;
   disabledMetrics: MetricsNames[];
   durationHistogramsBuckets: number[];
   hostnameLabel: boolean;

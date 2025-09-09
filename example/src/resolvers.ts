@@ -9,21 +9,24 @@ export function generateAsyncResponse<T = any>(
   maxTimeout: number = 500
 ): Promise<T> {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (!alwaysReturnSuccess && Math.random() < 0.999) {
-        let data: T;
+    setTimeout(
+      () => {
+        if (!alwaysReturnSuccess && Math.random() < 0.999) {
+          let data: T;
 
-        try {
-          data = dataFn();
+          try {
+            data = dataFn();
 
-          resolve(data);
-        } catch (err) {
-          reject(err);
+            resolve(data);
+          } catch (err) {
+            reject(err);
+          }
+        } else {
+          reject(new Error('Error in async operation'));
         }
-      } else {
-        reject(new Error('Error in async operation'));
-      }
-    }, Math.floor(Math.random() * maxTimeout) + 1);
+      },
+      Math.floor(Math.random() * maxTimeout) + 1
+    );
   });
 }
 

@@ -1,3 +1,30 @@
+# [4.0.0](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v3.0.0...v4.0.0) (2025-09-09)
+
+
+* feat!: add support for Apollo Server 5 ([1a324f6](https://github.com/moderneinc/apollo-prometheus-exporter/commit/1a324f6db290a548e98e6d67a6bcf23ab49fc775))
+
+
+### Bug Fixes
+
+* fetch all branches in publish workflow for semantic-release ([b1a06b3](https://github.com/moderneinc/apollo-prometheus-exporter/commit/b1a06b39c1e93c0f189b92954b642465a7e285be))
+* semantic-release config and GitHub workflow improvements ([24fba70](https://github.com/moderneinc/apollo-prometheus-exporter/commit/24fba70261dc2c226d0e1b00db7f62f8228fd15e))
+* simplify semantic-release branch configuration ([0040ae2](https://github.com/moderneinc/apollo-prometheus-exporter/commit/0040ae21ed47a04014cb72df7ed6350c6e4c4b32))
+
+
+### Features
+
+* modernize dependencies to latest versions ([b3c79a2](https://github.com/moderneinc/apollo-prometheus-exporter/commit/b3c79a2b7d9450652c518fa791ed29d8d07a9606))
+* re-enable 3.x branch in workflow triggers ([8ebca4d](https://github.com/moderneinc/apollo-prometheus-exporter/commit/8ebca4d3524a3a625d3e9a4d84b46edfd2d5149e))
+
+
+### BREAKING CHANGES
+
+* use v1 for Apollo Server 2, v2 for Apollo Server 3, v3 for Apollo Server 4, and v4 for Apollo Server 5
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+
 # [3.0.0](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v2.1.1...v3.0.0) (2023-11-22)
 
 

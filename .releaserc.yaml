@@ -12,6 +12,8 @@ plugins:
   - - '@semantic-release/npm'
     - pkgRoot: dist
       tarballDir: dist
+      npmPublish: true
+      provenance: true
   - - '@semantic-release/git'
     - assets:
         - CHANGELOG.md

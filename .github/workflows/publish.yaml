@@ -28,6 +28,7 @@ jobs:
         with:
           node-version: '22'
           cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
       - name: Install Dependencies
         run: yarn --pure-lockfile
       - name: Build
@@ -39,4 +40,5 @@ jobs:
           yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
           HUSKY: 0

@@ -1,3 +1,10 @@
+## [4.1.1](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v4.1.0...v4.1.1) (2025-09-23)
+
+
+### Bug Fixes
+
+* sync version from semantic-release to dist package.json ([#4](https://github.com/moderneinc/apollo-prometheus-exporter/issues/4)) ([cc441d3](https://github.com/moderneinc/apollo-prometheus-exporter/commit/cc441d351dd62eca9d950eaa890234d57c11b36a))
+
 # [4.1.0](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v4.0.0...v4.1.0) (2025-09-23)
 
 

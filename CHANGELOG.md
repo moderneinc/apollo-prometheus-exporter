@@ -1,3 +1,16 @@
+# [4.1.0](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v4.0.0...v4.1.0) (2025-09-23)
+
+
+### Bug Fixes
+
+* add contents write permission to publish workflow ([#2](https://github.com/moderneinc/apollo-prometheus-exporter/issues/2)) ([c9183f6](https://github.com/moderneinc/apollo-prometheus-exporter/commit/c9183f61c16fa07547a2c141c3639e3070063487))
+* configure npm trusted publishing for semantic-release ([#3](https://github.com/moderneinc/apollo-prometheus-exporter/issues/3)) ([2db52a7](https://github.com/moderneinc/apollo-prometheus-exporter/commit/2db52a764dc7778d8bca5716e703217a54667f9a))
+
+
+### Features
+
+* configure npm trusted publishing support ([a33b2e7](https://github.com/moderneinc/apollo-prometheus-exporter/commit/a33b2e74394b607dfc959128796f2201f9502725))
+
 # [4.0.0](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v3.0.0...v4.0.0) (2025-09-09)
 
 

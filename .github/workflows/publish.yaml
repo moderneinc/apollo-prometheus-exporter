@@ -52,9 +52,17 @@ jobs:
           HUSKY: 0
       - name: Publish to npm with Trusted Publishing
         run: |
-          # Create tarball for GitHub release assets
+          # Get the version from the main package.json (updated by semantic-release)
+          VERSION=$(node -p "require('./package.json').version")
+          echo "Publishing version: $VERSION"
+
+          # Update the version in dist/package.json
           cd dist
+          npm version $VERSION --no-git-tag-version
+
+          # Create tarball for GitHub release assets
           npm pack
+
           # Publish to npm with provenance using trusted publishing
           npm publish --provenance --access public
         env:

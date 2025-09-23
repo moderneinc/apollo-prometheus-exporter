@@ -49,7 +49,15 @@ jobs:
           yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUSKY: 0
+      - name: Publish to npm with Trusted Publishing
+        run: |
+          # Create tarball for GitHub release assets
+          cd dist
+          npm pack
+          # Publish to npm with provenance using trusted publishing
+          npm publish --provenance --access public
+        env:
           # Enable npm provenance for trusted publishing - generates cryptographic attestations
           # linking the published package to its source code and build environment
           NPM_CONFIG_PROVENANCE: true
-          HUSKY: 0

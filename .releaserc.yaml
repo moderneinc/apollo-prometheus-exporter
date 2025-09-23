@@ -9,11 +9,7 @@ plugins:
   - '@semantic-release/release-notes-generator'
   - - '@semantic-release/changelog'
     - changelogFile: CHANGELOG.md
-  - - '@semantic-release/npm'
-    - pkgRoot: dist
-      tarballDir: dist
-      npmPublish: true
-      provenance: true
+  # @semantic-release/npm removed - using manual npm publish with trusted publishing instead
   - - '@semantic-release/git'
     - assets:
         - CHANGELOG.md

@@ -10,8 +10,16 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# NPM Trusted Publishing Configuration
+# This workflow uses npm trusted publishing with OIDC tokens instead of long-lived npm tokens.
+# Trusted publishing provides enhanced security and generates cryptographic provenance attestations.
+#
+# References:
+# - NPM Trusted Publishing: https://docs.npmjs.com/trusted-publishers
+# - NPM Provenance: https://docs.npmjs.com/generating-provenance-statements
+# - semantic-release npm plugin: https://github.com/semantic-release/npm#provenance
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write  # Required for OIDC trusted publishing
   contents: write  # Required to create releases and push tags
 
 jobs:
@@ -28,6 +36,7 @@ jobs:
         with:
           node-version: '22'
           cache: 'yarn'
+          # Configure npm registry for trusted publishing
           registry-url: 'https://registry.npmjs.org'
       - name: Install Dependencies
         run: yarn --pure-lockfile
@@ -40,5 +49,15 @@ jobs:
           yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
           HUSKY: 0
+      - name: Publish to npm with Trusted Publishing
+        run: |
+          # Create tarball for GitHub release assets
+          cd dist
+          npm pack
+          # Publish to npm with provenance using trusted publishing
+          npm publish --provenance --access public
+        env:
+          # Enable npm provenance for trusted publishing - generates cryptographic attestations
+          # linking the published package to its source code and build environment
+          NPM_CONFIG_PROVENANCE: true

@@ -52,13 +52,13 @@ jobs:
           HUSKY: 0
       - name: Publish to npm with Trusted Publishing
         run: |
-          # Get the version from the main package.json (updated by semantic-release)
+          # Get the version that semantic-release set in the root package.json
           VERSION=$(node -p "require('./package.json').version")
           echo "Publishing version: $VERSION"
 
-          # Update the version in dist/package.json
+          # Update version in dist/package.json to match
           cd dist
-          npm version $VERSION --no-git-tag-version
+          npm version $VERSION --allow-same-version --no-git-tag-version
 
           # Create tarball for GitHub release assets
           npm pack

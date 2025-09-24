@@ -9,9 +9,11 @@ plugins:
   - '@semantic-release/release-notes-generator'
   - - '@semantic-release/changelog'
     - changelogFile: CHANGELOG.md
-  # @semantic-release/npm removed - using manual npm publish with trusted publishing instead
+  - - '@semantic-release/npm'
+    - npmPublish: false  # Only update version, don't publish (we publish from dist/)
   - - '@semantic-release/git'
     - assets:
+        - package.json
         - CHANGELOG.md
   - - '@semantic-release/github'
     - assets:

@@ -1,3 +1,10 @@
+## [4.1.3](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v4.1.2...v4.1.3) (2025-09-24)
+
+
+### Bug Fixes
+
+* simplify npm publishing by reverting to semantic-release approach ([#6](https://github.com/moderneinc/apollo-prometheus-exporter/issues/6)) ([6b87f80](https://github.com/moderneinc/apollo-prometheus-exporter/commit/6b87f80eb7087b4d17dd47d1bf1c8ed7b78c6744))
+
 ## [4.1.2](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v4.1.1...v4.1.2) (2025-09-24)
 
 

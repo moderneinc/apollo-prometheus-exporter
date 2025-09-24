@@ -1,6 +1,6 @@
 {
   "name": "@moderneinc/apollo-prometheus-exporter",
-  "version": "0.0.0-development",
+  "version": "4.1.2",
   "description": "Plugin for Apollo Server to export metrics in Prometheus format",
   "keywords": [
     "apollo",

@@ -1,3 +1,10 @@
+## [4.1.2](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v4.1.1...v4.1.2) (2025-09-24)
+
+
+### Bug Fixes
+
+* add semantic-release npm plugin to update package.json version ([#5](https://github.com/moderneinc/apollo-prometheus-exporter/issues/5)) ([4f02af9](https://github.com/moderneinc/apollo-prometheus-exporter/commit/4f02af965bd8379c2fe5e9a3379a3cae23f90ea8))
+
 ## [4.1.1](https://github.com/moderneinc/apollo-prometheus-exporter/compare/v4.1.0...v4.1.1) (2025-09-23)
 
 

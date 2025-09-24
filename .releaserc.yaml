@@ -10,10 +10,10 @@ plugins:
   - - '@semantic-release/changelog'
     - changelogFile: CHANGELOG.md
   - - '@semantic-release/npm'
-    - npmPublish: false  # Only update version, don't publish (we publish from dist/)
+    - pkgRoot: dist
+      tarballDir: dist
   - - '@semantic-release/git'
     - assets:
-        - package.json
         - CHANGELOG.md
   - - '@semantic-release/github'
     - assets:
